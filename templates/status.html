@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block title %}Status - Bitmanager{% endblock %}
+{% block content %}
+      <div class="jumbotron">
+        <h1>Instance Status</h1>
+        <p class="lead">
+        	{% if status == 0 %}
+        		Your instance is pending
+        	{% elif status == 16 %}
+        		Your instance is running: <a href="http://{{ link }}">click here to access</a><br />
+        		If you'd like to terminate it, <a href="{{ terminate_link }}">click here</a>
+        	{% elif status == 32 %}
+        		Your instance is shutting down
+        	{% elif status == 48 %}
+        		Your instance is terminated
+        	{% elif status == 64 %}
+        		Your instance is stoppping
+        	{% elif status == 80 %}
+        		Your instance is stopped
+        	{% else%}
+        		Your instance couldn't be found - it's possible it's still being spun up, or has been removed
+        	{% endif %}
+        </p>
+      </div>
+{% endblock %}

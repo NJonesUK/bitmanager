@@ -7,9 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    {% block header %}
+    {% endblock %}
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +39,7 @@
 
     <div class="container">
       <div class="header clearfix">
-        <h3 class="text-muted">Bitmanager</h3>
+        <h3 class="text-muted"><a href="/">Bitmanager</a></h3>
       </div>
       {% block content %}
       {% endblock %}
