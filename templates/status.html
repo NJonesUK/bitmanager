@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block header %}
+{% if status != 16 %}
+<meta http-equiv="refresh" content="2" />
+{% endif %}
 {% endblock %}
 {% block title %}Status - Bitmanager{% endblock %}
 {% block content %}
@@ -20,7 +23,8 @@
         	{% elif status == 80 %}
         		Your instance is stopped
         	{% else%}
-        		Your instance couldn't be found - it's possible it's still being spun up, or has been removed
+        		Your instance couldn't be found - it's likely that it's still being spun up. We'll keep refreshing this page for you til it's ready.
+        		<br />If you've terminated the instance then this would also result in us not being able to find it.
         	{% endif %}
         </p>
       </div>

@@ -4,17 +4,17 @@
       <div class="jumbotron">
         <h1>Welcome to Bitmanager!</h1>
         <p class="lead">We'll just go spin you up a Bitnami Wordpress instance on the Amazon cloud - just enter the necessary details below and we can get started!</p>
-        <form class="form-horizontal" action="/create_instance" method="get">
+        <form class="form-horizontal" action="/create_instance" method="GET">
           <div class="form-group">
 		    <label for="inputAccess" class="col-sm-2 control-label">Access Key</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control" id="inputAccess" placeholder="Access Key">
+		      <input type="text" name="access" class="form-control" id="inputAccess" placeholder="Access Key">
 		    </div>
 		  </div>
 		  <div class="form-group">
 		    <label for="inputSecret" class="col-sm-2 control-label">Secret Access Key</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control" id="inputSecret" placeholder="Secret Access Key">
+		      <input type="text" name="secret" class="form-control" id="inputSecret" placeholder="Secret Access Key">
 		    </div>
 		  </div>
 		  <div class="form-group">
